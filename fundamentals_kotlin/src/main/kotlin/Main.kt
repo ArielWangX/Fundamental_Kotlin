@@ -9,6 +9,32 @@ import java.util.TimeZone
  * @author xie
  */
 fun main(arguments: Array<String>) {
+    /**
+     * Store Data in Collections
+     */
+
+    val birthday = Triple(17, 8, 1994)
+    val person = Pair("Xie Wang", birthday)
+
+    val nameUsingOrdering = person.first
+    val birthdayUsingOrdering = person.second
+
+    val (name, bday) = person       //don't mean we create two name variable.
+    val (day, month, _) =bday       // you can not use year of bday
+
+    val yearOfBirth = bday.third    //but you can still fetch the year of birthday
+    println("$name was born on $day/$month, year unknown.")
+
+
+//    val fullName = Pair<String, String>("Xie", "Wang")
+//    val person = Pair(fullName, birthday)
+
+//    val (name, lastName) = fullName
+//    println("My name is $name $lastName.")
+//    println("My name is ${fullName.first} ${fullName.second}.")
+
+
+
 
     /** Use Data Types & Operations
      *  Booleans & Comparison operators
@@ -207,22 +233,22 @@ fun main(arguments: Array<String>) {
 //
 //    println(message)
 
-    // challenge
-    println("Please enter your first name:")
-    val firstName = readln()
-    println("Please enter your last name:")
-    val lastName = readln()
-    println("Please enter your nickname if you have:")
-    val nickname = readln()
-    println("Please enter your country:")
-    val country = readln()
-    println("Please enter your age:")
-    val age = readln()
-
-    val yearOfBirth = 2022 - age.toInt()
-    val printNickname = nickname?: ""
-
-    println("$firstName $printNickname $lastName, born on $yearOfBirth, in $country.")
+//    // challenge
+//    println("Please enter your first name:")
+//    val firstName = readln()
+//    println("Please enter your last name:")
+//    val lastName = readln()
+//    println("Please enter your nickname if you have:")
+//    val nickname = readln()
+//    println("Please enter your country:")
+//    val country = readln()
+//    println("Please enter your age:")
+//    val age = readln()
+//
+//    val yearOfBirth = 2022 - age.toInt()
+//    val printNickname = nickname?: ""
+//
+//    println("$firstName $printNickname $lastName, born on $yearOfBirth, in $country.")
 
 
 } // fun main()
