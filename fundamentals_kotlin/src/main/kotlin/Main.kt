@@ -12,19 +12,58 @@ fun main(arguments: Array<String>) {
     /**
      * Store Data in Collections
      */
+// Allocate Arrays
+    val visitedCountries = arrayOf<String>(     //creating an array using arrayOf() approach
+        "China","Australia","Japan","Korea"
+    )
 
-    val birthday = Triple(17, 8, 1994)
-    val person = Pair("Xie Wang", birthday)
+    println(visitedCountries)       //print out the memory address
+    println(visitedCountries.size)      //how many items are in the array
+    println(visitedCountries[3])        //position relative to the very first item in the array. (zero index based)
 
-    val nameUsingOrdering = person.first
-    val birthdayUsingOrdering = person.second
+    visitedCountries[3] = "the USA"     //change the internal structure of array
+    println(visitedCountries[3])
 
-    val (name, bday) = person       //don't mean we create two name variable.
-    val (day, month, _) =bday       // you can not use year of bday
+    val sizedArray = Array(10) {""}     //creating array using array constructor
+    val emptyArray = emptyArray<String>()       //creating and empty array
 
-    val yearOfBirth = bday.third    //but you can still fetch the year of birthday
-    println("$name was born on $day/$month, year unknown.")
+    val arrayOfInts = intArrayOf(2,3,4,5,6,7)
+    println(arrayOfInts)
 
+    val intArray = IntArray(10)
+    println(intArray)
+
+    println(visitedCountries.lastIndex)
+    println(visitedCountries.last())
+    println(visitedCountries.first())
+
+    val currentCountry = "Spain"
+    println(visitedCountries.contains(currentCountry))      //contains() booleans
+
+    val hasVisitedSpain = currentCountry in visitedCountries        //an operator called in
+    val hasNotVisitedSpain = currentCountry !in visitedCountries
+    println(hasVisitedSpain)
+    println(hasNotVisitedSpain)
+
+//  Challenge: Pairs and Triples
+//    val creditCard = Triple("cardNumber", "securityCode", "Visa")
+//    val bankAccount = Triple("Xie Wang", creditCard, "balance")
+//    val (cardNumber, _,typeOfCard) = creditCard
+//
+//    println("${bankAccount.first}, $cardNumber, $typeOfCard, ${bankAccount.third}.")
+
+//  Combine Data in Pairs and Triples
+//    val birthday = Triple(17, 8, 1994)
+//    val person = Pair("Xie Wang", birthday)
+//
+//    val nameUsingOrdering = person.first
+//    val birthdayUsingOrdering = person.second
+//
+//    val (name, bday) = person       //don't mean we create two name variable.
+//    val (day, month, _) =bday       // you can not use year of bday
+//
+//    val yearOfBirth = bday.third    //but you can still fetch the year of birthday
+//    println("$name was born on $day/$month, year unknown.")
 
 //    val fullName = Pair<String, String>("Xie", "Wang")
 //    val person = Pair(fullName, birthday)
