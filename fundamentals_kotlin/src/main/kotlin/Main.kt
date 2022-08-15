@@ -11,39 +11,116 @@ import java.util.TimeZone
 fun main(arguments: Array<String>) {
     /**
      * Store Data in Collections
+     * Collections in memory
+     * Big O notation
+     * Array - static collection
+     * List - Dynamic collection
      */
+// Challenge: conclusion
+    val weekdays = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    weekdays[4] = "lastWorkDayInAWeek"
+    println(weekdays)
+
+    val mutableWeekdays = weekdays.toMutableList()
+    mutableWeekdays.add("hopeCanHaveThreeHolidays")
+    mutableWeekdays.remove("Thursday")
+
+    println(mutableWeekdays)
+
+    val removeExist = "Thursday" in mutableWeekdays
+    println(removeExist)
+
+// Challenge: Array & Lists
+    val favoriteGame = arrayOf("game1","game2","game3","game4","game5")
+    favoriteGame[3] = "game6"
+    println(favoriteGame[1])
+    println(favoriteGame)
+
+//    val mutableFavoriteGameList = mutableListOf("game1","game2","game3","game4","game5")
+    val mutableFavoriteGameList = favoriteGame.toMutableList()
+    println(mutableFavoriteGameList)
+    mutableFavoriteGameList.add("game7")
+    mutableFavoriteGameList.add(2, "game8")
+    println(mutableFavoriteGameList)
+
+    mutableFavoriteGameList.removeAt(5)
+    println(mutableFavoriteGameList)
+
+
+// Create Lists of Data
+//    val countries = listOf("China", "Australia", "Japan")     // immutable list
+//
+// //    val mutableListOfCountries = mutableListOf("China", "Australia", "Japan")       //mutable list: can add or remove elements
+//    val mutableListOfCountries = countries.toMutableList()      // interchangeable between collections
+//    println(mutableListOfCountries)
+//
+//    mutableListOfCountries.add("Germany")       // append at the end
+//    mutableListOfCountries.add(1,"Greece")      // add element in specific position (cause list shift - slower adding way)
+//    println(mutableListOfCountries)
+//
+//    mutableListOfCountries.addAll(3, listOf("Spain","USA","Poland"))        // add more elements at once
+//    println(mutableListOfCountries)
+//    println(mutableListOfCountries.size)
+//
+//    val visitedChina = "China"      //booleans check
+//    println(mutableListOfCountries.contains(visitedChina))  //contains()
+//
+//    val hasVisitedChina = visitedChina in mutableListOfCountries        // in operator
+//    println(hasVisitedChina)
+//
+//    mutableListOfCountries.remove("Poland")     //remove element
+//    mutableListOfCountries.removeAt(3)
+//    mutableListOfCountries.removeAll(listOf("Greece", "Germany"))       //remove elements
+//
+//    println(mutableListOfCountries)
+//
+//    mutableListOfCountries[2] = "Greece"    // add element
+//    val combineList = countries + mutableListOfCountries        //combine lists
+//    val emptyList = emptyList<String>()     // create empty list
+//
+//    println(mutableListOfCountries)
+//    println(combineList)
+//    println(emptyList)
+//
+//    mutableListOfCountries.clear()      // clear the list using clear()
+//    println(mutableListOfCountries)
+
+
+//    val countries = listOf("China", "Australia", "Japan")     // immutable list
+//    println(countries)
+
 // Allocate Arrays
-    val visitedCountries = arrayOf<String>(     //creating an array using arrayOf() approach
-        "China","Australia","Japan","Korea"
-    )
-
-    println(visitedCountries)       //print out the memory address
-    println(visitedCountries.size)      //how many items are in the array
-    println(visitedCountries[3])        //position relative to the very first item in the array. (zero index based)
-
-    visitedCountries[3] = "the USA"     //change the internal structure of array
-    println(visitedCountries[3])
-
-    val sizedArray = Array(10) {""}     //creating array using array constructor
-    val emptyArray = emptyArray<String>()       //creating and empty array
-
-    val arrayOfInts = intArrayOf(2,3,4,5,6,7)
-    println(arrayOfInts)
-
-    val intArray = IntArray(10)
-    println(intArray)
-
-    println(visitedCountries.lastIndex)
-    println(visitedCountries.last())
-    println(visitedCountries.first())
-
-    val currentCountry = "Spain"
-    println(visitedCountries.contains(currentCountry))      //contains() booleans
-
-    val hasVisitedSpain = currentCountry in visitedCountries        //an operator called in
-    val hasNotVisitedSpain = currentCountry !in visitedCountries
-    println(hasVisitedSpain)
-    println(hasNotVisitedSpain)
+//    val visitedCountries = arrayOf<String>(     //creating an array using arrayOf() approach
+//        "China","Australia","Japan","Korea"
+//    )
+//
+//    println(visitedCountries)       //print out the memory address
+//    println(visitedCountries.size)      //how many items are in the array
+//    println(visitedCountries[3])        //position relative to the very first item in the array. (zero index based)
+//
+//    visitedCountries[3] = "the USA"     //change the internal structure of array
+//    println(visitedCountries[3])
+//
+//    val sizedArray = Array(10) {""}     //creating array using array constructor
+//    val emptyArray = emptyArray<String>()       //creating and empty array
+//
+//    val arrayOfInts = intArrayOf(2,3,4,5,6,7)
+//    println(arrayOfInts)
+//
+//    val intArray = IntArray(10)
+//    println(intArray)
+//
+//    println(visitedCountries.lastIndex)
+//    println(visitedCountries.last())
+//    println(visitedCountries.first())
+//
+//    val currentCountry = "Spain"
+//    println(visitedCountries.contains(currentCountry))      //contains() booleans
+//
+//    val hasVisitedSpain = currentCountry in visitedCountries        //an operator called in
+//    val hasNotVisitedSpain = currentCountry !in visitedCountries
+//    println(hasVisitedSpain)
+//    println(hasNotVisitedSpain)
 
 //  Challenge: Pairs and Triples
 //    val creditCard = Triple("cardNumber", "securityCode", "Visa")
