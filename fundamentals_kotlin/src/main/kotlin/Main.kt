@@ -13,22 +13,73 @@ fun main(arguments: Array<String>) {
     /**
      * Manage Control Flow
      */
-//    Challenge: While Loop
-     var i = 0
-    while (i < 15) {
-        println(i + 1)
-        i++
+    // Challenge: For loop
+    val rangeOfNumber = 0..19
+    for (number in rangeOfNumber) {
+        print(number)
     }
 
-    val name = arrayOf("name1","name2","name3","name4","name5","name6")
-    var index = name.lastIndex
+    println("")
 
-    do {
-        if (index > name.lastIndex || index < 0) return
+    for (number in rangeOfNumber step 3) {
+        print(number)
+    }
 
-        println(name[index])
-        index -= 1
-    } while (index >= 0 && index < name.size)
+    println("")
+
+    val rangeOfDecreasingNumber = 15 downTo 1
+    for (number in rangeOfDecreasingNumber step 2) {
+        print(number)
+    }
+//    // For loop
+//    val rangeFromZeroToTen = 0..10
+//    println(rangeFromZeroToTen)
+//
+//    val exclusiveRange = 0 until 10
+//    println(exclusiveRange)
+//
+//    for (index in rangeFromZeroToTen step 2) {
+//        print(index)
+//    }
+//
+//    println("")
+//
+//    for (index in 10 downTo 0 step 2) {
+//        print(index)
+//    }
+//
+//    println("")
+//
+//    val countries = arrayOf("China", "Australia", "Japan","Hungary","Serbia")
+//
+//    for (countryIndex:Int in countries.indices) {
+//        println("${countries[countryIndex]}")
+//    }
+//
+//    println("")
+//
+//    for (country in countries) {
+//        println("$country")
+//    }
+
+
+
+////    Challenge: While Loop
+//     var i = 0
+//    while (i < 15) {
+//        println(i + 1)
+//        i++
+//    }
+//
+//    val name = arrayOf("name1","name2","name3","name4","name5","name6")
+//    var index = name.lastIndex
+//
+//    do {
+//        if (index > name.lastIndex || index < 0) return
+//
+//        println(name[index])
+//        index -= 1
+//    } while (index >= 0 && index < name.size)
 
 ////  Loop using while loops
 //    val countries = arrayOf("China", "Australia", "Japan","Korea","USA")
