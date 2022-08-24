@@ -1,5 +1,6 @@
 import java.util.TimeZone
 
+
 /**
  * This is a documentation-style comment.
  * You can reference things here, like the [main] function.
@@ -10,41 +11,76 @@ import java.util.TimeZone
  */
 fun main(arguments: Array<String>) {
     /**
+     * Manage Control Flow
+     */
+//    Challenge: While Loop
+     var i = 0
+    while (i < 15) {
+        println(i + 1)
+        i++
+    }
+
+    val name = arrayOf("name1","name2","name3","name4","name5","name6")
+    var index = name.lastIndex
+
+    do {
+        if (index > name.lastIndex || index < 0) return
+
+        println(name[index])
+        index -= 1
+    } while (index >= 0 && index < name.size)
+
+////  Loop using while loops
+//    val countries = arrayOf("China", "Australia", "Japan","Korea","USA")
+
+//    var i = 0
+//    while (i < countries.size) {
+//        println("Country at index $i is ${countries[i]}")
+//        i += 1
+//    }
+
+//    var i = 5
+//    do {
+//        println("Country at index $i is ${countries[i]}")
+//        i += 1
+//    } while (i < countries.size)
+
+    /**
      * Store Data in Collections
      * Collections in memory
      * Big O notation
      * Array - static collection
      * List - Dynamic collection
      */
-// Challenge: conclusion
-    val weekdays = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-    weekdays[4] = "lastWorkDayInAWeek"
-    println(weekdays)
-
-    val mutableWeekdays = weekdays.toMutableList()
-    mutableWeekdays.add("hopeCanHaveThreeHolidays")
-    mutableWeekdays.remove("Thursday")
-
-    println(mutableWeekdays)
-
-    val removeExist = "Thursday" in mutableWeekdays
-    println(removeExist)
-
-// Challenge: Array & Lists
-    val favoriteGame = arrayOf("game1","game2","game3","game4","game5")
-    favoriteGame[3] = "game6"
-    println(favoriteGame[1])
-    println(favoriteGame)
-
-//    val mutableFavoriteGameList = mutableListOf("game1","game2","game3","game4","game5")
-    val mutableFavoriteGameList = favoriteGame.toMutableList()
-    println(mutableFavoriteGameList)
-    mutableFavoriteGameList.add("game7")
-    mutableFavoriteGameList.add(2, "game8")
-    println(mutableFavoriteGameList)
-
-    mutableFavoriteGameList.removeAt(5)
-    println(mutableFavoriteGameList)
+//// Challenge: conclusion
+//    val weekdays = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+//    weekdays[4] = "lastWorkDayInAWeek"
+//    println(weekdays)
+//
+//    val mutableWeekdays = weekdays.toMutableList()
+//    mutableWeekdays.add("hopeCanHaveThreeHolidays")
+//    mutableWeekdays.remove("Thursday")
+//
+//    println(mutableWeekdays)
+//
+//    val removeExist = "Thursday" in mutableWeekdays
+//    println(removeExist)
+//
+//// Challenge: Array & Lists
+//    val favoriteGame = arrayOf("game1","game2","game3","game4","game5")
+//    favoriteGame[3] = "game6"
+//    println(favoriteGame[1])
+//    println(favoriteGame)
+//
+////    val mutableFavoriteGameList = mutableListOf("game1","game2","game3","game4","game5")
+//    val mutableFavoriteGameList = favoriteGame.toMutableList()
+//    println(mutableFavoriteGameList)
+//    mutableFavoriteGameList.add("game7")
+//    mutableFavoriteGameList.add(2, "game8")
+//    println(mutableFavoriteGameList)
+//
+//    mutableFavoriteGameList.removeAt(5)
+//    println(mutableFavoriteGameList)
 
 
 // Create Lists of Data
