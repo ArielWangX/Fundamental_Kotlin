@@ -13,24 +13,102 @@ fun main(arguments: Array<String>) {
     /**
      * Manage Control Flow
      */
-    // Challenge: For loop
-    val rangeOfNumber = 0..19
-    for (number in rangeOfNumber) {
-        print(number)
+    //Challenge: Iterating Collections
+//    Create a matrix with array
+//    val matrixRow = 5
+//    val matrixColumn = 8
+//    val matrixArray = Array(matrixRow) {Array(matrixColumn) {"."} }
+
+    val matrix = MutableList<MutableList<String>>(7) { MutableList(7) {"."} }
+
+    matrix[2][4] = "X"
+
+    for (row in matrix) {
+        println(row)
     }
 
-    println("")
+    println("-----")
 
-    for (number in rangeOfNumber step 3) {
-        print(number)
+    loop@for (row in 0..matrix.lastIndex) {
+        println("Searching in row $row")
+        for (column in 0..matrix.lastIndex) {
+            if (matrix[row][column] == "X") {
+                println("Found X at: $row:$column")
+                break@loop
+            } else {
+                print(".\t")
+            }
+        }
+        println()
     }
 
-    println("")
 
-    val rangeOfDecreasingNumber = 15 downTo 1
-    for (number in rangeOfDecreasingNumber step 2) {
-        print(number)
-    }
+//    // Iterate Over Collections
+//    val weekdays = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+//    val listWeekdays = weekdays.toList()
+//
+//    for (day in listWeekdays) {
+//        if (day == "Monday") {
+//            continue        //skip this element
+//        }
+//        println(day)
+//
+//        if (day == "Thursday") {
+//            println("Get ready for the weekend!")
+//            break       //break the entire loop
+//        }
+//    }
+//
+//    val matrix = MutableList<MutableList<String>>(size = 5) {
+//        MutableList(5) {""}
+//    }
+//
+//    for (row in 0..matrix.lastIndex) {
+//        for (column in 0..matrix.lastIndex) {
+//            matrix[row][column] = "$row:$column"        // assign value to matrix
+//        }
+//    }
+//
+//    println(matrix)     //print row & column
+//    println("------")
+//
+//    for (row in matrix) {
+//        println(row)        // print row
+//    }
+//
+//    val thirdRowFifthColumnElement = matrix[2][4]
+//    println(thirdRowFifthColumnElement)
+//
+//    row@ for (row in 0..5) {        // add label for loop
+//        column@ for (column in 0..5) {
+//            if (column == 2 && row == 2) {
+//                break@row
+//            }
+//            print("x\t")
+//        }
+//       println()
+//    }
+
+
+
+//    // Challenge: For loop
+//    val rangeOfNumber = 0..19
+//    for (number in rangeOfNumber) {
+//        print(number)
+//    }
+//
+//    println("")
+//
+//    for (number in rangeOfNumber step 3) {
+//        print(number)
+//    }
+//
+//    println("")
+//
+//    val rangeOfDecreasingNumber = 15 downTo 1
+//    for (number in rangeOfDecreasingNumber step 2) {
+//        print(number)
+//    }
 //    // For loop
 //    val rangeFromZeroToTen = 0..10
 //    println(rangeFromZeroToTen)
