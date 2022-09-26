@@ -11,36 +11,96 @@ import java.util.TimeZone
  */
 fun main(arguments: Array<String>) {
     /**
+     * Functions & Nullability
+     */
+    fun createRange(start: Int, end: Int, isHalfOpen: Boolean = false): IntRange {
+        if (isHalfOpen) {
+            return start until end
+        } else {
+            return start..end
+        }
+    }
+
+    val halfOpenRange = createRange(5,10,true)
+    println(halfOpenRange)
+
+    /**
      * Manage Control Flow
      */
+//    // Challenge: Use When Expressions
+//    val year = 1978
+//
+//    val message = when (year) {
+//        in 1800..1899 -> "It is in 18 century."
+//        in 1900..1999 -> "It is in 19 century"
+//        in 2000..2100 -> "It is 20 century"
+//        else -> "This was looong ago!"
+//    }
+//
+//    println(message)
+
+//    // Simplify Code with When Expressions
+//    val age = 23
+//
+//    val message = when (age) {
+//        in 0..12 -> "Still a young human"
+//        in 13..19 -> "Teenager"
+//        in 20..29 -> "In your twenties"
+//        in 30..39 -> "In your forties"
+//        else -> "You are a wise person :]"
+//    }
+//
+//    println(message)
+//
+//    val email = "john@email.com"
+//    val password = "32eddsfsfswf4"
+//
+//    when {
+//        email.isEmpty() -> {
+//            println("You need to choose an email")
+//        }
+//        "@" !in email -> {
+//            println("Your email is invalid")
+//        }
+//        password.isEmpty() -> {
+//            println("You need to enter a password")
+//        }
+//        password.length < 10 -> {
+//            println("Password not strong enough")
+//        }
+//        else -> {
+//            println("Email is $email " + "Password length: ${password.length}" )
+//        }
+//    }
+
     //Challenge: Iterating Collections
 //    Create a matrix with array
 //    val matrixRow = 5
 //    val matrixColumn = 8
 //    val matrixArray = Array(matrixRow) {Array(matrixColumn) {"."} }
 
-    val matrix = MutableList<MutableList<String>>(7) { MutableList(7) {"."} }
-
-    matrix[2][4] = "X"
-
-    for (row in matrix) {
-        println(row)
-    }
-
-    println("-----")
-
-    loop@for (row in 0..matrix.lastIndex) {
-        println("Searching in row $row")
-        for (column in 0..matrix.lastIndex) {
-            if (matrix[row][column] == "X") {
-                println("Found X at: $row:$column")
-                break@loop
-            } else {
-                print(".\t")
-            }
-        }
-        println()
-    }
+//    val matrix = MutableList<MutableList<String>>(7) { MutableList(7) {"."} }
+//
+//    matrix[2][4] = "X"
+//
+//    for (row in matrix) {
+//        println(row)
+//    }
+//
+//    println("-----")
+//
+//    loop@for (row in 0..matrix.lastIndex) {
+//        println("Searching in row $row")
+//        for (column in 0..matrix.lastIndex) {
+//            if (matrix[row][column] == "X") {
+//                println("Found X at: $row:$column")
+//                break@loop
+//            } else {
+//                print(".\t")
+//            }
+//        }
+//        println()
+//    }
 
 
 //    // Iterate Over Collections
