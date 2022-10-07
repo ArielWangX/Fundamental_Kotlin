@@ -1,6 +1,3 @@
-import java.util.TimeZone
-
-
 /**
  * This is a documentation-style comment.
  * You can reference things here, like the [main] function.
@@ -11,18 +8,120 @@ import java.util.TimeZone
  */
 fun main(arguments: Array<String>) {
     /**
+     *  Store Unique Data in Sets
+     */
+//    var userIds = setOf("ID18", "ID20", "ID13")
+//    println(userIds)
+//    println(userIds.contains("ID18"))
+//    println("ID18" in userIds)
+//
+//    val mutableIds = userIds.toMutableSet()
+//    println(mutableIds.add("ID35"))
+//    println(mutableIds)
+//
+//    println(mutableIds.remove("ID18"))
+//
+//    for (userID in mutableIds) {
+//        println(userID)
+//    }
+//
+//    // challenge
+//    val itemOnDesk = listOf<String>("Laptop","mouse","Keyboard", "Screen","Phone","Screen")
+//    val setItemOnDesk = itemOnDesk.toMutableSet()
+//    println(setItemOnDesk)
+//
+//    setItemOnDesk.remove("Phone")
+//    println(setItemOnDesk)
+//
+//    for (item in setItemOnDesk) {
+//        println(item)
+//    }
+
+
+    /**
+     * Create & Access Maps
+     * Work with Maps
+     */
+//    val moviesCollection = mutableMapOf<String, MutableList<String>>()
+//    println(moviesCollection)
+//    moviesCollection["Action"] = mutableListOf("Taken", "John Wick")    //.put ---add pair(key,value) in maps
+//    println(moviesCollection)
+//
+//    val actionMovies = moviesCollection["Action"]
+//    println(actionMovies)
+//
+//    val horrorMovies = moviesCollection["Horror"]
+//    println(horrorMovies)
+//
+//    val authenticationHeaders = mapOf(
+//        "API_KEY" to "your-api-key",
+//        "Authorization" to "auth token",
+//        "content/type" to "application/json"
+//    )
+//    println(authenticationHeaders)
+//
+//    // ---
+//
+//    moviesCollection["Horror"] = mutableListOf()
+//    println(moviesCollection)
+//
+//    moviesCollection["Horror"] = mutableListOf("Get Out")
+//    println(moviesCollection)
+//
+//    moviesCollection["Horror"]?.add("Midsommar")    // add element in map value
+//    println(moviesCollection)
+//
+//    val removeActionMovies = moviesCollection.remove("Action")  // remove key of map and return the previous value
+//    println(removeActionMovies)
+//    println(moviesCollection)
+//
+//    moviesCollection["Horror"]?.add("dsfsfd")
+//    moviesCollection["Comedy"] = mutableListOf("ted")
+//
+//    for (key in moviesCollection.keys) {
+//        println(key)
+//    }
+//
+//    for (value in moviesCollection.values) {
+//        println(value)
+//    }
+//
+//    for ((key,value) in moviesCollection) {
+//        println("key is $key, value is $value")
+//    }
+
+//    // challenge
+//    val petIHave = mutableMapOf<String, MutableList<String>>()
+//    petIHave["Jello"] = mutableListOf("JellyFish")
+//    petIHave["Button"] = mutableListOf("Laborador")
+//
+//    petIHave["Button"]?.add("Golden Retriever")
+//    println(petIHave)
+//    petIHave["Button"]?.remove("Golden Retriever")
+//    println(petIHave)
+//
+//    for (key in petIHave.keys) {
+//        println(key)
+//    }
+//
+//    for (value in petIHave.values) {
+//        println(value)
+//    }
+
+
+    /**
      * Functions & Nullability
      */
-    fun createRange(start: Int, end: Int, isHalfOpen: Boolean = false): IntRange {
-        if (isHalfOpen) {
-            return start until end
-        } else {
-            return start..end
-        }
-    }
-
-    val halfOpenRange = createRange(5,10,true)
-    println(halfOpenRange)
+//    fun createRange(start: Int, end: Int, isHalfOpen: Boolean = false): IntRange {
+//        if (isHalfOpen) {
+//            return start until end
+//        } else {
+//            return start..end
+//        }
+//    }
+//
+//    val halfOpenRange = createRange(5,10,true)
+//    println(halfOpenRange)
 
     /**
      * Manage Control Flow
@@ -355,6 +454,14 @@ fun main(arguments: Array<String>) {
 //    println("${bankAccount.first}, $cardNumber, $typeOfCard, ${bankAccount.third}.")
 
 //  Combine Data in Pairs and Triples
+//    val fullName = Pair("Ariel", "Wang")
+//    val (firstName, lastName) = fullName        // destructuring to break down a pair to 2 pieces.
+//    val personConstant = Pair(fullName, 31)
+//
+//
+//    //println("Her name is: ${fullName.first} ${fullName.second}")
+//    println("Her name is: ${firstName} ${lastName}")
+
 //    val birthday = Triple(17, 8, 1994)
 //    val person = Pair("Xie Wang", birthday)
 //
@@ -366,10 +473,10 @@ fun main(arguments: Array<String>) {
 //
 //    val yearOfBirth = bday.third    //but you can still fetch the year of birthday
 //    println("$name was born on $day/$month, year unknown.")
-
+//
 //    val fullName = Pair<String, String>("Xie", "Wang")
 //    val person = Pair(fullName, birthday)
-
+//
 //    val (name, lastName) = fullName
 //    println("My name is $name $lastName.")
 //    println("My name is ${fullName.first} ${fullName.second}.")
